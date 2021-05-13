@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yajaneya.client.controller.MainController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <bottom>
+            <TextArea fx:id="comResTextArea" editable="false" prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <VBox prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Файл">
+                        <items>
+                          <MenuItem fx:id="mnFileClose" mnemonicParsing="false" onAction="#close" text="Выход" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <FlowPane prefHeight="14.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="btAuth" mnemonicParsing="false" onAction="#btnAuth" text="Войти" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </top>
+         <right>
+            <TreeView fx:id="explServer" prefHeight="289.0" prefWidth="503.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox prefHeight="289.0" prefWidth="96.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="sendToCloud" mnemonicParsing="false" onAction="#sendToCloud" prefHeight="25.0" prefWidth="97.0" text="Отправить" />
+                  <Button fx:id="takeFromCloud" mnemonicParsing="false" onAction="#takeFromCloud" prefHeight="25.0" prefWidth="97.0" text="Получить" />
+                  <Button fx:id="newDirToCloud" mnemonicParsing="false" onAction="#newDirToCloud" prefHeight="25.0" prefWidth="97.0" text="Новая папка" />
+                  <Button fx:id="delFromCloud" layoutX="10.0" mnemonicParsing="false" onAction="#delFromCloud" prefHeight="25.0" prefWidth="96.0" text="Удалить" />
+                  <Button fx:id="lsFromCloud" mnemonicParsing="false" onAction="#lsFromCloud" prefHeight="25.0" prefWidth="96.0" text="Обновить" />
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
